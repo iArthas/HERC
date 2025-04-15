@@ -1,0 +1,154 @@
+/* Hero Section - Galería */
+.hero-galeria {
+    margin-top: 80px;
+    padding: 2rem 1rem;
+    background: none;
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar - Fondo negro y texto blanco */
+.nav-transparent {
+    background-color: #333; /* Fondo negro */
+}
+
+.hero-galeria h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    margin-top: 40px; /* Agregar margen superior para separar el título de la cabecera */
+}
+
+
+/* Título de la sección Galerías */
+.galerias .section-header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.galerias .section-header h2 {
+    font-size: 2.5rem;
+    color: #007bff; /* Puedes cambiar este color */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Diseño de la cuadrícula de galerías */
+.galerias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo de cada tarjeta de galería */
+.galeria-item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* Altura fija para las tarjetas */
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+}
+
+.galeria-item img, 
+.galeria-item video {
+    width: 100%; /* El video e imagen ocuparán el ancho completo */
+    height: 200px; /* Fijamos una altura uniforme */
+    object-fit: cover; /* Recorta el contenido para que se ajuste */
+    border-radius: 5px; /* Opcional, mantiene esquinas redondeadas */
+    margin-bottom: 10px;
+    max-height: 250px;
+}
+
+.galeria-item h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.galeria-item p {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: auto;
+    text-align: center;
+}
+
+.modal-content video, 
+.modal-content img {
+    width: 90%; /* Ambos elementos ocuparán el 90% del ancho del modal */
+    height: auto; /* Mantiene la proporción original */
+    max-height: 90vh; /* No supera el 90% de la altura de la pantalla */
+    object-fit: contain; /* Asegura que el contenido no se recorte */
+}
+
+
+/* Botón de cierre */
+.close-button {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    display: none; /* Oculta la X al inicio */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .galerias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-item {
+        height: auto; /* No limitamos la altura en pantallas pequeñas */
+    }
+
+    .galeria-item video {
+        max-height: 200px; /* Ajustamos el tamaño de las imágenes en pantallas pequeñas */
+    }
+    .galeria-item img {
+        max-height: 200px; /* Ajustamos el tamaño de las imágenes en pantallas pequeñas */
+    }
+
+    .modal-content {
+        max-width: 95%;
+        margin: 5% auto;
+    }
+}

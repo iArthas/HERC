@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    transition: 0.4s;
+    z-index: 1000;
+}
+
+nav img {
+    width: 300px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+/* NAVBAR TRANSPARENTE Y CON EFECTO */
+.nav-transparent {
+    background: transparent;
+    position: absolute;
+}
+
+.nav-transparent .menu li a {
+    color: rgb(252, 240, 240);
+}
+
+.nav-transparent .menu li a:hover {
+    color: #007bff;
+}
+
+.nav-scrolled {
+    background: white;
+    position: fixed;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-scrolled .menu li a {
+    color: black;
+}
+
+.nav-scrolled .menu li a:hover {
+    color: #007bff;
+}
+
+/* MENÚ HAMBURGUESA */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: transparent;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .menu.active {
+        display: flex;
+        background: rgba(255, 255, 255, 0.8);
+        color: inherit; /* Eliminar color: black !important */
+    }
+    .menu.active li a {
+        color: black; /* Definir color base */
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px;
+        transition: color 0.3s ease; /* Añadir transición suave */
+    }
+    
+
+    .menu li {
+        margin: 15px 0;
+    }
+
+    .menu li a {
+        color: black;
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px;
+    }
+
+    .menu li a:hover {
+        color: #007bff;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: #007bff;
+    }
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+.text-content {
+    max-width: 50%;
+    padding: 20px;
+}
+.image-content {
+    max-width: 50%;
+}
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.title {
+    font-size: 2em;
+    font-weight: bold;
+}
+.description {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* SECCIÓN PRINCIPAL */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("/image/mfrproyectonew.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* VIDEO */
+.video-container {
+text-align: center;
+    width: 100%;
+    max-width: 640px; /* Tamaño estándar de YouTube */
+    margin: 80px auto 50px; /* Aumentado de 50px a 80px */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 360px; /* Mantiene la proporción 16:9 */
+    border: none;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.footer-logo {
+    margin-top: 20px;
+}
+
+.footer-logo img {
+    width: 300px;
+}
+
+/* CARRUSEL DE IMÁGENES MEJORADO */
+.carousel-container {
+width: 90%;
+max-width: 1200px;
+margin: 50px auto;
+padding: 20px;
+overflow: hidden;
+}
+
+.swiper {
+width: 100%;
+height: auto;
+max-height: 500px;
+aspect-ratio: 16/9;
+}
+
+.swiper-slide {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.swiper-slide img {
+width: 100%;
+max-height: 100%;
+object-fit: contain; /* Evita cortes en las imágenes */
+border-radius: 15px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swiper-slide img:hover {
+transform: scale(1.05);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+.swiper {
+    aspect-ratio: 4/3;
+    max-height: 400px;
+}
+}
+
+@media (max-width: 480px) {
+.swiper {
+    aspect-ratio: 16/9;
+    max-height: 300px;
+}
+}
+
+.contenedor-servicios {
+text-align: center;
+padding: 40px 20px;
+}
+
+
+.servicio p {
+font-size: 16px;
+color: #333; /* Gris oscuro */
+line-height: 1.5;
+max-width: 90%;
+margin: 0 auto;
+text-align: center; /* Justifica el texto */
+}
+
+
+.titulo-seccion {
+font-size: 28px;
+font-weight: bold;
+color: #212529; /* Color oscuro elegante */
+margin-bottom: 30px;
+}
+
+.servicios {
+display: flex;
+flex-wrap: wrap;  /* Permite que los elementos se ajusten en varias líneas */
+justify-content: center;
+gap: 50px;
+}
+
+.servicio i{
+font-size: 48px;
+margin-bottom: 15px;
+color: #007bff;
+}
+
+.servicio {
+text-align: center;
+padding: 50px; /* Aumenta el padding para hacerlas más espaciosas */
+background-color: #ffffff;
+border-radius: 15px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+width: 360px; /* Aumenta el ancho de las tarjetas */
+height: auto; /* Ajusta la altura si es necesario */
+}
+
+.servicio:hover {
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+transform: translateY(-5px);
+}
+
+/* Hacer responsive en pantallas pequeñas */
+@media (max-width: 768px) {
+.servicios {
+gap: 30px; /* Reduce el espacio entre servicios */
+}
+.servicio {
+width: 80%; /* Aumenta el ancho para ocupar más espacio */
+}
+}
+
+@media (max-width: 480px) {
+.servicio {
+width: 90%; /* Ocupar casi todo el ancho en móviles */
+padding: 15px; /* Reducir padding para mejor espacio */
+}
+}

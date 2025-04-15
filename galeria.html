@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERC - Galería de Servicios</title>
+    <!-- Enlaces a bibliotecas externas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="shortcut icon" type="image/png" href="image/herc.png"/>
+</head>
+<body>
+    <!-- Navbar (igual que en index.html) -->
+    <nav class="nav-transparent">
+        <a href="index.html">
+            <img src="image/Logos-17.png" alt="HERC Logo">
+        </a>        
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times" style="display: none;"></i>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero de Galería -->
+        <section class="hero-galeria">
+            <div class="hero-content">
+                <h1>Nuestra Galería</h1>
+                <p>Explora nuestros mejores momentos y proyectos.</p>
+            </div>
+        </section>
+
+        <section class="galerias">
+            <div class="section-header">
+                <h2>Nuestros trabajos</h2> <!-- Título de la sección -->
+            </div>
+            <div class="galerias-grid">
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/proyectos/trujillo 1.0 enero 2023/IMG_20221228_082813.jpg" alt="PROYECTO TRUJILLO">
+                    <h3>Proyecto Trujillo - 2023</h3>
+                    <p>Calidad en Gestión de Servicios</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/proyectos/trujillo 1.0 enero 2023/IMG_20221228_120432.jpg" alt="PROYECTO TRUJILLO">
+                    <h3>Proyecto Trujillo - 2023</h3>
+                    <p>Gestión Ambiental</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/proyectos/trujillo 1.0 enero 2023/IMG_20221229_124956.jpg" alt="PROYECTO TRUJILLO">
+                    <h3>Proyecto Trujillo - 2023</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/proyectos/trujillo 1.0 enero 2023/IMG_20221228_140110.jpg" alt="PROYECTO TRUJILLO">
+                    <h3>Proyecto Trujillo - 2023</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarVideo(this)">
+                    <video controls>
+                        <source src="image/proyectos/trujillo 1.0 enero 2023/VID_20221229_125612.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <h3>Proyecto Trujillo - 2023</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/vlcsnap-2021-05-14-14h04m23s221.png" alt="PROYECTO ASIA">
+                    <h3>PROYECTO SEV ASIA</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/vlcsnap-2021-05-14-14h03m59s731.png" alt="PROYECTO ASIA">
+                    <h3>PROYECTO ISM</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/vlcsnap-2021-05-14-14h04m13s249.png" alt="PROYECTO ASIA">
+                    <h3>PROYECTO ISM</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/Mi video2.mp4" alt="PROYECTO ISM">
+                    <h3>PROYECTO ISM</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/Mi video2.mp4" alt="PROYECTO ISM">
+                    <h3>PROYECTO ISM</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/Mi video2.mp4" alt="PROYECTO ISM">
+                    <h3>PROYECTO ISM</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/Mi video2.mp4" alt="PROYECTO ISM">
+                    <h3>PROYECTO ISM</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/Mi video2.mp4" alt="PROYECTO ISM">
+                    <h3>PROYECTO ISM</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <img src="image/Mi video2.mp4" alt="PROYECTO ISM">
+                    <h3>PROYECTO ISM</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+                <div class="galeria-item" onclick="mostrarCertificado(this)">
+                    <video src="image/Mi video2.mp4" alt="PROYECTO ISM">
+                    <h3>PROYECTO ISM</h3>
+                    <p>Gestión de Seguridad y Salud Ocupacional</p>
+                </div>
+            </div>
+        
+            <div id="modal-certificado" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" id="close-button" onclick="cerrarModal()">&times;</span>
+                    <img id="certificado-modal" src="" alt="">
+                </div>
+            </div>
+
+            <!-- Modal para videos -->
+            <div id="modal-video" class="modal">
+                <div class="modal-content">
+                    <span id="close-video" class="close-button" onclick="exitModal()">×</span>
+                    <video id="video-modal" controls>
+                        <source src="" type="video/mp4">
+                    </video>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer (igual que en index.html) -->
+    <footer>
+        <p>&copy; 2025 HERC PERFORACIONES E INVERSIONES S.A.C. - Todos los derechos reservados</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/PerforacionesHerc" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/perforacionesherc" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@perforacionesherc530" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/51999479036" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+        <div class="footer-logo">
+            <img src="image/Logos-19.png" alt="Logo HERC">
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/galeria.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
