@@ -27,10 +27,12 @@ function mostrarVideo(element) {
     const closeButton = document.getElementById('close-video');
 
     video.querySelector('source').src = videoSource; // Se asigna la fuente del video
+    video.muted = true; // Asegura que el video esté en silencio
     video.load(); // Se recarga el video para aplicar la nueva fuente
     modal.style.display = 'flex';
     closeButton.style.display = 'block'; // Muestra la X cuando se abre el modal
 }
+
 
 function exitModal() {
     const modal = document.getElementById('modal-video');
@@ -38,3 +40,10 @@ function exitModal() {
     modal.style.display = 'none';
     video.pause(); // Detiene el video cuando se cierra
 }
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        exitModal();       // Cierra el modal de video
+        cerrarModal();     // Cierra el modal de imagen
+    }
+});

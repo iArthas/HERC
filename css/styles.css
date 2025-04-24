@@ -12,6 +12,23 @@ body {
     min-height: 100vh;
 }
 
+.hero-nosotros {
+    margin-top: 80px;
+    padding: 2rem 1rem;
+    background: none;
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-nosotros h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    margin-top: 40px; /* Agregar margen superior para separar el título de la cabecera */
+}
 
 /* NAVBAR */
 nav {
@@ -27,7 +44,7 @@ nav {
 }
 
 nav img {
-    width: 300px;
+    width: 300px;   /* Tamaño del Logo en la cabecera */
 }
 
 .menu {
@@ -41,13 +58,14 @@ nav img {
 
 .menu li a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem; /* Puedes subir más si lo deseas */
+    font-weight: 550;  /* Opcional: para hacerlas más gruesas */
     transition: 0.3s;
 }
 
 /* NAVBAR TRANSPARENTE Y CON EFECTO */
 .nav-transparent {
-    background: transparent;
+    background: #333;
     position: absolute;
 }
 
@@ -56,7 +74,7 @@ nav img {
 }
 
 .nav-transparent .menu li a:hover {
-    color: #007bff;
+    color: #009fe3;
 }
 
 .nav-scrolled {
@@ -70,7 +88,7 @@ nav img {
 }
 
 .nav-scrolled .menu li a:hover {
-    color: #007bff;
+    color: #009fe3;
 }
 
 /* MENÚ HAMBURGUESA */
@@ -120,12 +138,12 @@ nav img {
     }
 
     .menu li a:hover {
-        color: #007bff;
+        color: #009fe3;
     }
 
     .menu-toggle {
         display: block;
-        color: #007bff;
+        color: #009fe3;
     }
 }
 
@@ -134,44 +152,82 @@ nav img {
     align-items: center;
     justify-content: center;
     padding: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
+
+.section.bg-gray {
+    background-color: #f4f4f4;
+}
+
 .text-content {
-    max-width: 50%;
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+}
+
+.image-content {
+    flex: 1;
     padding: 20px;
 }
-.image-content {
-    max-width: 50%;
-}
+
 .image-content img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    display: block;
 }
+
 .title {
     font-size: 2em;
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
 }
+
 .description {
     font-size: 1.2em;
-    color: #666;
+    color: #333;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .text-content, .image-content {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .description {
+        font-size: 1em;
+    }
 }
 
 /* SECCIÓN PRINCIPAL */
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
-    background: url("/image/mfrproyectonew.jpg") no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+    height: 100vh; /* altura completa del viewport */
+    overflow: hidden;
 }
 
-.hero-content {
-    max-width: 600px;
+.hero-banner {
+    width: 100%;
+    height: 100%;
+    background-image: url("/image/IMG_20220429_122525.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
+
+
 
 .hero h2 {
     font-size: 2.5rem;
@@ -185,17 +241,18 @@ nav img {
 
 /* VIDEO */
 .video-container {
-text-align: center;
+    text-align: center;
     width: 100%;
-    max-width: 640px; /* Tamaño estándar de YouTube */
-    margin: 80px auto 50px; /* Aumentado de 50px a 80px */
+    max-width: 900px; /* Aumentado de 640px a 900px */
+    margin: 80px auto 50px;
 }
 
 .video-container iframe {
     width: 100%;
-    height: 360px; /* Mantiene la proporción 16:9 */
+    height: 506px; /* Proporción 16:9 para 900px de ancho */
     border: none;
 }
+
 
 /* PIE DE PÁGINA */
 footer {
@@ -219,7 +276,7 @@ footer {
 }
 
 .social-icons a:hover {
-    color: #007bff;
+    color: #009fe3;
 }
 
 .footer-logo {
@@ -237,48 +294,41 @@ max-width: 1200px;
 margin: 50px auto;
 padding: 20px;
 overflow: hidden;
-}
-
-.swiper {
-width: 100%;
-height: auto;
-max-height: 500px;
-aspect-ratio: 16/9;
+background-color: transparent;
 }
 
 .swiper-slide {
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px; /* Aumentado de 200px a 250px */
+    background-color: transparent;
+    padding: 10px;
 }
 
 .swiper-slide img {
-width: 100%;
-max-height: 100%;
-object-fit: contain; /* Evita cortes en las imágenes */
-border-radius: 15px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 90%; /* Aumenta el uso del espacio vertical */
+    max-width: 90%;
+    object-fit: contain;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.swiper-slide img:hover {
-transform: scale(1.05);
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
 
 @media (max-width: 768px) {
-.swiper {
-    aspect-ratio: 4/3;
-    max-height: 400px;
-}
+    .swiper-slide {
+        height: 150px;
+    }
 }
 
 @media (max-width: 480px) {
-.swiper {
-    aspect-ratio: 16/9;
-    max-height: 300px;
+    .swiper-slide {
+        height: 120px;
+    }
 }
-}
+
 
 .contenedor-servicios {
 text-align: center;
@@ -313,7 +363,7 @@ gap: 50px;
 .servicio i{
 font-size: 48px;
 margin-bottom: 15px;
-color: #007bff;
+color: #009fe3;
 }
 
 .servicio {
@@ -347,4 +397,44 @@ width: 80%; /* Aumenta el ancho para ocupar más espacio */
 width: 90%; /* Ocupar casi todo el ancho en móviles */
 padding: 15px; /* Reducir padding para mejor espacio */
 }
+}
+
+#btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #009fe3;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+#btn-top:hover {
+    background-color: #009fe3;
+}
+
+#btn-whatsapp {
+    position: fixed;
+    bottom: 80px; /* Un poco más arriba que el botón "volver arriba" si lo tienes */
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    text-decoration: none;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+#btn-whatsapp:hover {
+    background-color: #1ebe5b;
 }

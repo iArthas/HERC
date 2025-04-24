@@ -35,24 +35,29 @@
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
-        </div>
+        <div class="hero-banner"></div>
     </header>
 
+    <!-- Primer bloque: Imagen izquierda, texto derecha -->
     <div class="section">
         <div class="image-content">
-            <img src="image/perforacion.png" alt="Perforacion de Pozos">
+            <img src="image/perforacion.png" alt="Perforación de Pozos">
         </div>
         <div class="text-content">
             <div class="title">Perforación de Pozos Tubulares</div>
-            <div class="description">En Herc, ofrecemos servicios especializados en la perforación de pozos tubulares, diseñados para garantizar el acceso a fuentes de agua subterránea de manera eficiente y segura. Nuestra tecnología avanzada y equipos de última generación nos permiten realizar perforaciones con alta precisión, adaptadas a las necesidades de cada proyecto.</div>
+            <div class="description">
+                En Herc, ofrecemos servicios especializados en la perforación de pozos tubulares, diseñados para garantizar el acceso a fuentes de agua subterránea de manera eficiente y segura. Nuestra tecnología avanzada y equipos de última generación nos permiten realizar perforaciones con alta precisión, adaptadas a las necesidades de cada proyecto.
+            </div>
         </div>
     </div>
-    
-    <div class="section" style="background-color: #f4f4f4;">
+
+    <!-- Segundo bloque: Texto izquierda, imagen derecha -->
+    <div class="section bg-gray">
         <div class="text-content">
-            <div class="title">Rehabilitación de Pozos</div>
-            <div class="description">En Herc, no solo perforamos nuevos pozos, sino que también contamos con un servicio integral de rehabilitación de pozos tubulares. A través de técnicas avanzadas, restauramos y optimizamos pozos existentes para maximizar su rendimiento y extender su vida útil.</div>
+            <div class="title">Rehabilitación y Profundización de Pozos Tubulares</div>
+            <div class="description">
+                En Herc, no solo perforamos nuevos pozos, sino que también contamos con un servicio integral de rehabilitación de pozos tubulares. A través de técnicas avanzadas, restauramos y optimizamos pozos existentes para maximizar su rendimiento y extender su vida útil.
+            </div>
         </div>
         <div class="image-content">
             <img src="image/rehabilitacion.png" alt="Rehabilitación de Pozos">
@@ -60,29 +65,43 @@
     </div>
 
     <div class="video-container">
-        <h2>Descubre más sobre nuestra tecnología</h2>
+        <section class="hero-nosotros">
+            <div class="hero-content">
+                <h1>Descubre más</h1>
+                <p>Unete a nuestro canal de Youtube para mantenerte actualizado sobre la tecnología que utilizamos.</p>
+            </div>
+        </section>
         <iframe src="https://www.youtube.com/embed/6LsG4oLvtw0" title="Video de YouTube" allowfullscreen></iframe>
     </div>
     
     <!-- SECCIÓN DE FOTOS (CARRUSEL) -->
     <div class="carousel-container">
-        <h2 style="text-align: center;">Galería de Imágenes</h2>
+        <section class="hero-nosotros">
+            <div class="hero-content">
+                <h1>Nuestros Aliados</h1>
+                <p>En Herc, nos enorgullece construir vínculos sólidos con nuestros aliados a través del compromiso y la calidad de nuestro trabajo.</p>
+            </div>
+        </section>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="image/aforo.png" alt="Imagen 1"></div>
-                <div class="swiper-slide"><img src="image/217568961_125470609748303_4284287161837874799_n.jpg" alt="Imagen 2"></div>
-                <div class="swiper-slide"><img src="image/diamantina.png" alt="Imagen 3"></div>
-                <div class="swiper-slide"><img src="https://picsum.photos/800/500?random=13" alt="Imagen 4"></div>
-                <div class="swiper-slide"><img src="https://picsum.photos/800/500?random=14" alt="Imagen 5"></div>
+                <div class="swiper-slide"><img src="image/LOGOS DE EMPRESAS/Heineken-Peru.png" alt="HEINEKEN PERÚ"></div>
+                <div class="swiper-slide"><img src="image/LOGOS DE EMPRESAS/tai-loy-logo-png_seeklogo-257817-removebg-preview.png" alt="TAI LOY"></div>
+                <div class="swiper-slide"><img src="image/LOGOS DE EMPRESAS/348429598_2569777633186351_2457405343755477447_n-removebg-preview.png" alt="LAN CASTER"></div>
+                <div class="swiper-slide"><img src="image/LOGOS DE EMPRESAS/HOSPITAL-ALMENARA-removebg-preview.png" alt="HOSPITAL ALMENARA"></div>
+                <div class="swiper-slide"><img src="image/LOGOS DE EMPRESAS/UCV.png" alt="UCV"></div>
+                <div class="swiper-slide"><img src="image/LOGOS DE EMPRESAS/FUNDODELVALLE.png" alt="FUNDO DEL VALLE"></div>
+                <div class="swiper-slide"><img src="image/LOGOS DE EMPRESAS/CONDOMINIOMORARIA.png" alt="CONDOMINIO MORARIA"></div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
     </div>
     
     <div class="contenedor-servicios">
-        <h2 class="titulo-seccion">Nuestros Servicios</h2>
+        <section class="hero-nosotros">
+            <div class="hero-content">
+                <h1>Nuestros Servicios</h1>
+            </div>
+        </section>
         <div class="servicios">
             <div class="servicio">
                 <i class="fas fa-tint"></i>
@@ -104,7 +123,6 @@
             
         </div>
     </div>
-    
 
     <footer>
         <p>&copy; 2025 HERC PERFORACIONES E INVERSIONES S.A.C. - Todos los derechos reservados</p>
@@ -124,12 +142,22 @@
             <img src="image/Logos-19.png" alt="Logo HERC">
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/51999479036?text=Hola,%20necesito%20realizar%20una%20consulta" target="_blank" id="btn-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Botón de Volver Arriba -->
+    <button id="btn-top" onclick="scrollToTop()">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
     <!-- Scripts al final del body -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/carousel.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
 </body>
 </html>

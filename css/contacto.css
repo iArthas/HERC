@@ -52,7 +52,7 @@
 
 .contacto-detalle i {
     font-size: 24px;
-    color: #007bff;
+    color: #009fe3;
     margin-right: 15px;
 }
 
@@ -94,7 +94,7 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #007bff;
+    border-color: #009fe3;
     outline: none;
 }
 
@@ -104,7 +104,7 @@ textarea {
 }
 
 .btn-enviar {
-    background-color: #007bff;
+    background-color: #009fe3;
     color: white;
     padding: 12px 30px;
     border: none;
@@ -115,7 +115,7 @@ textarea {
 }
 
 .btn-enviar:hover {
-    background-color: #0056b3;
+    background-color: #009fe3;
 }
 
 /* Redes Sociales y WhatsApp */
@@ -145,7 +145,7 @@ textarea {
 }
 
 .btn-email {
-    background-color: #007bff;
+    background-color: #009fe3;
 }
 
 .btn-whatsapp:hover,
@@ -170,4 +170,47 @@ textarea {
     .redes-container {
         flex-direction: column;
     }
+}
+
+/* Modal de éxito */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4); 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-contenido p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.modal-contenido button {
+    background-color: #009fe3;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

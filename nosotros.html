@@ -183,36 +183,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="certificaciones">
-            <div class="section-header">
-                <h2>Nuestras Certificaciones</h2> <!-- Título de la sección -->
-            </div>
-        <div class="certificaciones-grid">
-            <div class="certificado-item" onclick="mostrarCertificado(this)">
-              <img src="image/ENCISO RUIZ CONEJO, FERNANDO_page-0001.jpg" alt="Certificado ISO 9001">
-              <h3>Certificado ISO 9001</h3>
-              <p>Calidad en Gestión de Servicios</p>
-            </div>
-            <div class="certificado-item" onclick="mostrarCertificado(this)">
-              <img src="image/CAPACITACION IZAJE DE CARGA Fernando Enciso Sotil_page-0001.jpg" alt="Certificado ISO 14001">
-              <h3>Certificado ISO 14001</h3>
-              <p>Gestión Ambiental</p>
-            </div>
-            <div class="certificado-item" onclick="mostrarCertificado(this)">
-              <img src="image/ENCISO SOTIL, FERNANDO_page-0001.jpg" alt="Certificado OHSAS 18001">
-              <h3>Certificado OHSAS 18001</h3>
-              <p>Gestión de Seguridad y Salud Ocupacional</p>
-            </div>
-          </div>
-          
-          <div id="modal-certificado" class="modal">
-            <div class="modal-content">
-              <span class="close-button" id="close-button" onclick="cerrarModal()">&times;</span>
-              <img id="certificado-modal" src="" alt="">
-            </div>
-          </div>
-        </section>
     </main>
 
     <!-- Footer (igual que en index.html) -->
@@ -235,6 +205,16 @@
             <img src="image/Logos-19.png" alt="Logo HERC">
         </div>
     </footer>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/51999479036?text=Hola,%20necesito%20realizar%20una%20consulta" target="_blank" id="btn-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Botón de Volver Arriba -->
+    <button id="btn-top" onclick="scrollToTop()">
+        <i class="fa fa-chevron-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

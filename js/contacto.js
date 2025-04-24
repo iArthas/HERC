@@ -39,22 +39,38 @@ document.addEventListener('DOMContentLoaded', function() {
             ticking = true;
         }
     });
+});
 
-    
-    // Manejo del formulario de contacto
-    const formulario = document.getElementById('formularioContacto');
-    
-    formulario.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Aquí iría la lógica para enviar el formulario
-        // Por ejemplo, usando fetch para enviar los datos al servidor
-        const datos = new FormData(formulario);
-        
-        // Mostrar mensaje de éxito
-        alert('¡Mensaje enviado exitosamente!');
-        
-        // Limpiar el formulario
-        formulario.reset();
+// Manejo del formulario de contacto
+const formulario = document.getElementById('formularioContacto');
+const modal = document.getElementById('mensajeExito');
+
+formulario.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const datos = new FormData(formulario);
+
+    fetch('enviar.php', {
+        method: 'POST',
+        body: datos
+    })
+    .then(res => res.text())
+    .then(respuesta => {
+        if (respuesta.trim() === "success") {
+            modal.style.display = "flex";
+            formulario.reset();
+        } else {
+            alert("Hubo un error al enviar el mensaje.");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Error de red. Inténtalo más tarde.");
     });
 });
+
+// Función para cerrar el modal
+function cerrarModal() {
+    modal.style.display = "none";
+}
+
