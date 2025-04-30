@@ -60,7 +60,7 @@ formulario.addEventListener('submit', function(e) {
             modal.style.display = "flex";
             formulario.reset();
         } else {
-            alert("Hubo un error al enviar el mensaje.");
+            alert("Por favor utilicé el botón azul para enviarnos un correo.");
         }
     })
     .catch(error => {
