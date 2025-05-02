@@ -74,3 +74,14 @@ function cerrarModal() {
     modal.style.display = "none";
 }
 
+// Cerrar el modal al hacer clic en el botón de correo
+const btnCorreo = document.getElementById("btnCorreo");
+btnCorreo.addEventListener("click", function (e) {
+    e.preventDefault();           // Evita que el enlace se abra inmediatamente
+    cerrarModal();                // Cierra el modal
+    setTimeout(() => {
+        window.location.href = btnCorreo.href; // Abre el cliente de correo
+    }, 300); // Espera 300ms para que el cierre del modal se vea bien
+});
+
+

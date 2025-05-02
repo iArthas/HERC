@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefono = htmlspecialchars($_POST['telefono']);
     $mensaje  = htmlspecialchars($_POST['mensaje']);
 
-    $destinatario = "exodiavip@gmail.com";
+    $destinatario = "administracion@hercperforaciones.com";
     $asunto = "Nuevo mensaje de contacto";
 
     $contenido = "Nombre: $nombre\n";
@@ -21,4 +21,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "error";
     }
 }
-?>
+
