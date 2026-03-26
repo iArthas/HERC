@@ -4,7 +4,14 @@ import { useTheme } from '@/app/context/ThemeContext';
 import { Moon, Sun } from 'lucide-react';
 
 export function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, mounted } = useTheme();
+
+  // No renderizar hasta que esté montado para evitar desajuste de hidratación
+  if (!mounted) {
+    return (
+      <div className="fixed top-6 right-6 z-50 w-14 h-14 rounded-full bg-white/80 border border-white/30 shadow-lg" />
+    );
+  }
 
   return (
     <button
@@ -17,7 +24,7 @@ export function ThemeToggle() {
         backdrop-blur-md
         border border-opacity-30
         hover:scale-110 active:scale-95
-        shadow-lg hover:shadow-glow
+        shadow-lg hover:shadow-xl
         group
         ${
           theme === 'light'
@@ -43,7 +50,7 @@ export function ThemeToggle() {
       </div>
 
       {/* Efecto de partículas alrededor */}
-      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg" />
+      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg" />
     </button>
   );
 }
