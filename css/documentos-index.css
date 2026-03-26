@@ -7,23 +7,27 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 80px 20px;
+    background: var(--bg-primary);
 }
 
 /* HEADER */
 .section-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .section-header h1,
 .section-header h2 {
     font-size: 2.8rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .section-header p {
     font-size: 1.1rem;
-    color: #555;
+    color: var(--text-secondary);
 }
 
 /* CONTENEDOR */
@@ -31,8 +35,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 60px;
     flex-wrap: wrap;
+    background: var(--bg-secondary);
+    padding: 50px 40px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
 }
 
 /* PREVIEW */
@@ -40,53 +48,67 @@
     flex: 1;
     display: flex;
     justify-content: center;
+    min-width: 280px;
 }
 
 .doc-preview img {
     width: 100%;
-    max-width: 280px;
-    border-radius: 10px;
+    max-width: 300px;
+    border-radius: 12px;
     transform: rotate(-5deg);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    transition: 0.3s;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .doc-preview img:hover {
-    transform: rotate(0deg) scale(1.05);
+    transform: rotate(0deg) scale(1.08);
+    box-shadow: 0 24px 64px rgba(0, 180, 255, 0.25);
 }
 
 /* INFO */
 .doc-info {
     flex: 1;
     text-align: center;
+    min-width: 280px;
 }
 
 .doc-info h3 {
-    font-size: 1.8rem;
-    color: #009fe3;
+    font-size: 1.6rem;
+    color: var(--accent-primary);
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .doc-info p {
-    margin-bottom: 25px;
-    color: #555;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 /* BOTÓN */
 .btn-descarga {
-    display: inline-block;
-    padding: 15px 30px;
-    background: linear-gradient(135deg, #009fe3, #00d4ff);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     color: white;
     border-radius: 50px;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
-    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-descarga:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0,159,227,0.6);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0, 180, 255, 0.3);
+}
+
+.btn-descarga:active {
+    transform: translateY(-2px);
 }
 
 /* =========================
@@ -99,23 +121,40 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 15px;
+    gap: 30px;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+    padding: 50px 30px;
+    border-top: 3px solid var(--accent-primary);
+    border-bottom: 3px solid var(--accent-primary);
+    position: relative;
+    overflow: hidden;
+}
 
-    background: #ffffff;
-    padding: 15px 20px;
-    border-top: 6px solid rgba(0,159,227,0.6);
-    border-bottom: 6px solid rgba(0,159,227,0.6);
+.cert-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(0, 180, 255, 0.05), transparent);
+    animation: scan 4s infinite;
+    pointer-events: none;
+}
+
+.cert-banner > * {
+    position: relative;
+    z-index: 1;
 }
 
 .cert-text {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #444;
-    line-height: 1.4;
+    color: var(--text-primary);
+    line-height: 1.6;
+    max-width: 600px;
+    letter-spacing: 0.3px;
 }
 
 .cert-text span {
-    color: #009fe3;
+    color: var(--accent-primary);
     font-weight: 800;
 }
 
@@ -123,29 +162,72 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .cert-logo img {
     width: 140px;
     height: auto;
+    opacity: 0.9;
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.cert-logo img:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 /* =========================
    RESPONSIVE REAL
 ========================= */
 
+@media (max-width: 1024px) {
+    .doc-preview-container {
+        gap: 40px;
+        padding: 40px 30px;
+    }
+
+    .section-header h1,
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+}
+
 @media (max-width: 768px) {
+    .documentos {
+        padding: 60px 15px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-header h1,
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
 
     .doc-preview-container {
         flex-direction: column;
         text-align: center;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .doc-preview {
+        min-width: auto;
     }
 
     .doc-preview img {
-        width: 80%;
-        max-width: 220px;
+        width: 90%;
+        max-width: 250px;
+    }
+
+    .doc-info {
+        min-width: auto;
     }
 
     .doc-info h3 {
@@ -154,14 +236,65 @@
 
     .btn-descarga {
         width: 100%;
-        max-width: 250px;
+        max-width: 280px;
+        justify-content: center;
     }
 
     .cert-text {
-        font-size: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .cert-logo {
+        gap: 20px;
     }
 
     .cert-logo img {
-        width: 90px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .documentos {
+        padding: 40px 10px;
+    }
+
+    .section-header h1,
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .doc-preview-container {
+        padding: 20px 15px;
+    }
+
+    .doc-preview img {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .doc-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .btn-descarga {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+
+    .cert-banner {
+        padding: 30px 15px;
+        gap: 20px;
+    }
+
+    .cert-text {
+        font-size: 0.95rem;
+    }
+
+    .cert-logo {
+        gap: 15px;
+    }
+
+    .cert-logo img {
+        width: 80px;
     }
 }
