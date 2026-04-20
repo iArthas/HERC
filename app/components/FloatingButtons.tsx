@@ -40,7 +40,7 @@ export function FloatingButtons() {
           hover:scale-110 active:scale-95
           shadow-lg hover:shadow-2xl
           group
-          ${showWhatsapp ? 'bottom-32 opacity-100 visible' : 'bottom-6 opacity-0 invisible'}
+          ${showWhatsapp ? 'bottom-40 opacity-100 visible' : 'bottom-6 opacity-0 invisible'}
         `}
         title="Contactar por WhatsApp"
         aria-label="WhatsApp"
@@ -64,7 +64,7 @@ export function FloatingButtons() {
           hover:scale-110 active:scale-95
           shadow-lg hover:shadow-2xl
           group
-          ${showScrollTop ? 'bottom-20 opacity-100 visible' : '-bottom-20 opacity-0 invisible pointer-events-none'}
+          ${showScrollTop ? 'bottom-28 opacity-100 visible' : '-bottom-28 opacity-0 invisible pointer-events-none'}
         `}
         title="Volver al inicio"
         aria-label="Scroll to top"

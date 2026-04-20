@@ -12,6 +12,7 @@ export function Navbar() {
     { href: '/servicios', label: 'Servicios' },
     { href: '/nosotros', label: 'Nosotros' },
     { href: '/galeria', label: 'Galería' },
+    { href: '/documentos', label: 'Documentos' },
     { href: '/contacto', label: 'Contacto' },
   ];
 
