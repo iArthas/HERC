@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/app/context/ThemeContext';
-import { ThemeToggle } from '@/app/components/ThemeToggle';
 import { FloatingButtons } from '@/app/components/FloatingButtons';
 import './globals.css';
 
@@ -35,7 +34,6 @@ export default function RootLayout({
       </head>
       <body className="bg-white dark:bg-slate-900 text-gray-900 dark:text-white transition-colors duration-300">
         <ThemeProvider>
-          <ThemeToggle />
           <FloatingButtons />
           {children}
         </ThemeProvider>
