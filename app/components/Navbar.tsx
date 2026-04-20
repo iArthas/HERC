@@ -8,11 +8,11 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: '#inicio', label: 'Inicio' },
-    { href: '#servicios', label: 'Servicios' },
-    { href: '#nosotros', label: 'Nosotros' },
-    { href: '#galeria', label: 'Galería' },
-    { href: '#contacto', label: 'Contacto' },
+    { href: '/', label: 'Inicio' },
+    { href: '/servicios', label: 'Servicios' },
+    { href: '/nosotros', label: 'Nosotros' },
+    { href: '/galeria', label: 'Galería' },
+    { href: '/contacto', label: 'Contacto' },
   ];
 
   return (
