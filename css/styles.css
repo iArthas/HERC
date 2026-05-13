@@ -399,6 +399,7 @@ padding: 15px; /* Reducir padding para mejor espacio */
 }
 }
 
+/* BOTÓN VOLVER ARRIBA */
 #btn-top {
     position: fixed;
     bottom: 20px;
@@ -414,13 +415,16 @@ padding: 15px; /* Reducir padding para mejor espacio */
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 #btn-top:hover {
-    background-color: #009fe3;
+    background-color: #007bb5;
 }
 
+
+/* BOTÓN WHATSAPP */
 #btn-whatsapp {
     position: fixed;
-    bottom: 80px; /* Un poco más arriba que el botón "volver arriba" si lo tienes */
+    bottom: 80px; /* Más arriba que el botón volver arriba */
     right: 20px;
     background-color: #25d366;
     color: white;
@@ -432,10 +436,26 @@ padding: 15px; /* Reducir padding para mejor espacio */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 999;
     text-decoration: none;
-    display: none;
+    display: block; /* Visible */
     transition: all 0.3s ease-in-out;
+
+    /* ANIMACIÓN */
+    animation: bounce 2s infinite;
 }
+
 #btn-whatsapp:hover {
     background-color: #1ebe5b;
+}
+
+
+/* ANIMACIÓN REBOTE */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
